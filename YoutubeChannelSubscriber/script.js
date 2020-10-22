@@ -9,13 +9,13 @@ allChannelsBox.forEach(function (channel, index) {
     }
 });
 //for clicking all unsubscribed Channels
-allChannelsBox.forEach(function (channel, index) {
+allChannelsBox.forEach((channel, index) => {
     if (channel.children[1].innerText === "SUBSCRIBE") {
-        setTimeout(function () {
+        setTimeout(()=>{
             count++;
             console.log(
-                "Current Channel ->" +
-                    channel.children[0].children["title"].innerText
+                `Current Channel ->
+                    ${channel.children[0].children["title"].innerText}`
             );
             channel.children[1].children[0].children[0].click();
             console.log(
